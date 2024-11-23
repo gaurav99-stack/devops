@@ -1,0 +1,73 @@
+
+HITESHKUMAR_LTP+Administrator@HITESHKUMAR_LTP MINGW64 /d/DEMO-DAY3/GIT-RE
+$ git init
+Initialized empty Git repository in D:/DEMO-DAY3/GIT-REBASE/.git/
+
+HITESHKUMAR_LTP+Administrator@HITESHKUMAR_LTP MINGW64 /d/DEMO-DAY3/GIT-REBASE (master)
+$ touhc m1
+bash: touhc: command not found
+
+HITESHKUMAR_LTP+Administrator@HITESHKUMAR_LTP MINGW64 /d/DEMO-DAY3/GIT-REBASE (master)
+$ touch m1
+
+HITESHKUMAR_LTP+Administrator@HITESHKUMAR_LTP MINGW64 /d/DEMO-DAY3/GIT-REBASE (master)
+$ git add .
+
+HITESHKUMAR_LTP+Administrator@HITESHKUMAR_LTP MINGW64 /d/DEMO-DAY3/GIT-REBASE (master)
+$ git commit -m "c1 commit"
+[master (root-commit) dc4860b] c1 commit
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 m1
+
+HITESHKUMAR_LTP+Administrator@HITESHKUMAR_LTP MINGW64 /d/DEMO-DAY3/GIT-REBASE (master)
+$ git checkout b1
+error: pathspec 'b1' did not match any file(s) known to git
+
+HITESHKUMAR_LTP+Administrator@HITESHKUMAR_LTP MINGW64 /d/DEMO-DAY3/GIT-REBASE (master)
+$ git checkout -b b1
+Switched to a new branch 'b1'
+
+HITESHKUMAR_LTP+Administrator@HITESHKUMAR_LTP MINGW64 /d/DEMO-DAY3/GIT-REBASE (b1)
+$ touch b1
+
+HITESHKUMAR_LTP+Administrator@HITESHKUMAR_LTP MINGW64 /d/DEMO-DAY3/GIT-REBASE (b1)
+$ git add .
+
+HITESHKUMAR_LTP+Administrator@HITESHKUMAR_LTP MINGW64 /d/DEMO-DAY3/GIT-REBASE (b1)
+$ git commit -m "c2 commit"
+[b1 606075b] c2 commit
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 b1
+
+HITESHKUMAR_LTP+Administrator@HITESHKUMAR_LTP MINGW64 /d/DEMO-DAY3/GIT-REBASE (b1)
+$ git checkout master
+Switched to branch 'master'
+
+HITESHKUMAR_LTP+Administrator@HITESHKUMAR_LTP MINGW64 /d/DEMO-DAY3/GIT-REBASE (master)
+$ touch m2
+
+HITESHKUMAR_LTP+Administrator@HITESHKUMAR_LTP MINGW64 /d/DEMO-DAY3/GIT-REBASE (master)
+$ git add .
+
+HITESHKUMAR_LTP+Administrator@HITESHKUMAR_LTP MINGW64 /d/DEMO-DAY3/GIT-REBASE (master)
+$ git commit -m "c3 added"
+[master 587f456] c3 added
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 m2
+
+HITESHKUMAR_LTP+Administrator@HITESHKUMAR_LTP MINGW64 /d/DEMO-DAY3/GIT-REBASE (master)
+$ git checkout b1
+Switched to branch 'b1'
+
+HITESHKUMAR_LTP+Administrator@HITESHKUMAR_LTP MINGW64 /d/DEMO-DAY3/GIT-REBASE (b1)
+$ git rebase master
+Successfully rebased and updated refs/heads/b1.
+
+HITESHKUMAR_LTP+Administrator@HITESHKUMAR_LTP MINGW64 /d/DEMO-DAY3/GIT-REBASE (b1)
+$ git log --oneline
+cbe705a (HEAD -> b1) c2 commit
+587f456 (master) c3 added
+dc4860b c1 commit
+
+HITESHKUMAR_LTP+Administrator@HITESHKUMAR_LTP MINGW64 /d/DEMO-DAY3/GIT-REBASE (b1)
+$
