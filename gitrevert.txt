@@ -1,0 +1,43 @@
+
+HITESHKUMAR_LTP+Administrator@HITESHKUMAR_LTP MINGW64 /d/DEMO-DAY3/GIT-REV
+$ git init
+Initialized empty Git repository in D:/DEMO-DAY3/GIT-REVERT/.git/
+
+HITESHKUMAR_LTP+Administrator@HITESHKUMAR_LTP MINGW64 /d/DEMO-DAY3/GIT-REVERT (master)
+$ touch m1
+
+HITESHKUMAR_LTP+Administrator@HITESHKUMAR_LTP MINGW64 /d/DEMO-DAY3/GIT-REVERT (master)
+$ git add .
+
+HITESHKUMAR_LTP+Administrator@HITESHKUMAR_LTP MINGW64 /d/DEMO-DAY3/GIT-REVERT (master)
+$ git commit -m "c1 commit"
+[master (root-commit) 514520c] c1 commit
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 m1
+
+HITESHKUMAR_LTP+Administrator@HITESHKUMAR_LTP MINGW64 /d/DEMO-DAY3/GIT-REVERT (master)
+$ touch m2
+
+HITESHKUMAR_LTP+Administrator@HITESHKUMAR_LTP MINGW64 /d/DEMO-DAY3/GIT-REVERT (master)
+$ git add .
+
+HITESHKUMAR_LTP+Administrator@HITESHKUMAR_LTP MINGW64 /d/DEMO-DAY3/GIT-REVERT (master)
+$ git commit -m "c2 commit"
+[master 3fc79f2] c2 commit
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 m2
+
+HITESHKUMAR_LTP+Administrator@HITESHKUMAR_LTP MINGW64 /d/DEMO-DAY3/GIT-REVERT (master)
+$ touch m3
+
+HITESHKUMAR_LTP+Administrator@HITESHKUMAR_LTP MINGW64 /d/DEMO-DAY3/GIT-REVRevert "c3 commit"
+
+Reapply "c3 commit"
+
+
+[master 9811e61] Reapply "c3 commit"
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 m3
+
+HITESHKUMAR_LTP+Administrator@HITESHKUMAR_LTP MINGW64 /d/DEMO-DAY3/GIT-REVERT (master)
+$
